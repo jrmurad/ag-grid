@@ -1379,7 +1379,7 @@ var CellComp = (function (_super) {
         // thus it will skip the refresh on this cell until the end of this method where we call
         // refresh directly and we suppress the flash.
         this.editingCell = false;
-        if (this.cellEditor.destroy) {
+        if (this.cellEditor && this.cellEditor.destroy) {
             this.cellEditor.destroy();
         }
         // important to clear this out - as parts of the code will check for
